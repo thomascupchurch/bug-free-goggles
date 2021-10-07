@@ -1,10 +1,10 @@
-# Title (replace with your title)
+# 'img-src' Regex Tutorial
 
 Welcome to the regex tutorial for img-src. I hope you find this helpful.
 
 ## Summary
 
-The img-src regex matches the source (src) of an image (img) tag in html. Useful when searching for image code within a larger document, one could use this to cut down on time looking through html code to find the source for problematic image links.
+The img-src regex matches the source (src) of an image (img) tag in html. Useful when searching for image code within a larger document, one could use this to cut down on time looking through html code to find the source for problematic image links. Before we do anything else, this is the regex:
 
 /^<\s*img[^>]+src\s*=\s*(["'])(.*?)\1[^>]\*>$/
 
@@ -12,15 +12,10 @@ The img-src regex matches the source (src) of an image (img) tag in html. Useful
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Back-references](#back-references)(#look-ahead-and-look-behind)
 
 ## Regex Components
 
@@ -48,7 +43,7 @@ The img-src regex is composed of the following:
 
 `(["'])` searches for use of either single or double quotes;
 
-`(.*?)` searches for zero or more dots, with the `?` making the `*` "lazy," meaning it matches as few dots as possible;
+`(.*?)` searches for zero or more dots, with the `?` making the search "lazy" so as to match as few characters as possible;
 
 `\1` references capture croup number one, which was `(["'])`, and thus matches for closing single or double quotes, as is required in the img element src syntax;
 
@@ -60,25 +55,27 @@ The img-src regex is composed of the following:
 
 ### Anchors
 
+Uses beginning anchor, `^`, and end anchor, `$`
+
 ### Quantifiers
 
-### OR Operator
+Uses the one-or-more plus quantifier, `+`; the zero-or-more star, `*`; and the lazy, `?`, causing the preceding quantifier to match as few characters as possible.
 
 ### Character Classes
 
-### Flags
+Uses word, `\w`; whitespace, `\s`; dot, `.`;
 
 ### Grouping and Capturing
 
-### Bracket Expressions
+Uses two capturing groups, `(["'])` and `(.*?)`.
 
 ### Greedy and Lazy Match
 
-### Boundaries
+Uses the lazy to match as few dots at possible.
 
 ### Back-references
 
-### Look-ahead and Look-behind
+Uses numeric reference, `\1` to refer back to the first capture group.
 
 ## Author
 

@@ -1,0 +1,22 @@
+{
+  "name": "bug-free-goggles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomascupchurch/bug-free-goggles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomascupchurch/bug-free-goggles/issues"
+  },
+  "homepage": "https://github.com/thomascupchurch/bug-free-goggles#readme",
+  "dependencies": {
+    "benchmark": "^2.1.4"
+  }
+}
